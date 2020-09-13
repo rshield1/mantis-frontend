@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Navbar = () => {
-    return (
-        <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
-        <p className='f3 link dim grey pa3 pointer'>Sign Out</p>
-            
-        </nav>
-    )
+class Navbar extends Component {
+    render() {
+        return (
+            <nav className="navbar bg-dark">
+            <p className='f3 link dim grey pa3 pointer'>{this.props.title}</p>
+                
+            </nav>
+        )
+    }
 }
 
 export default Navbar

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Particles from 'react-particles-js';
 import Navbar from './components/navigation/Navbar';
-import Logo from './components/logo/Logo';
 import BusinessItem from './components/businessItem/BusinessItem'
 
 
@@ -32,8 +31,7 @@ class App extends Component {
   render() {
   return (
     <div className="App">
-    <Navbar />
-    <Logo />
+    <Navbar title="Mantis" icon="will add later"/>
     <BusinessItem />
 
     {/*<SearchField />
