@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
+import React  from 'react'
 
-class BusinessItem extends Component {
-    
-    render() {
-        const { name, image_url, url, display_phone } = this.props.business
+const BusinessItem = (props) => {
+        const { name, image_url, url, display_phone } = props.business
         return (
             <div className="card text-center">
                 <img src={image_url}
@@ -18,7 +16,7 @@ class BusinessItem extends Component {
 
             </div>
         )
-    }
+
 }
 
 export default BusinessItem

@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Navbar extends Component {
-    render() {
+const Navbar = (props) => {
         return (
             <nav className="navbar bg-dark">
-                <p className='f3 link dim grey pa3 pointer'>{this.props.title}</p>    
+                <p className='f3 link dim grey pa3 pointer'>{props.title}</p>    
             </nav>
         )
-    }
+
 }
 
 export default Navbar
