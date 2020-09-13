@@ -1,12 +1,6 @@
 * {
-  background-color:black;
+  color: whitesmoke;
 }
-
-.App {
-  text-align: center;
-  color: lightslategray;
-}
-
 .center {
   display: flex;
   justify-content: center;
