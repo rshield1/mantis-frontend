@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Particles from 'react-particles-js';
-
+import Navbar from './components/navigation/Navbar';
 
 
 const particlesOptions = {
@@ -26,10 +26,19 @@ const particlesOptions = {
 
 
 
-class App extends React.Component {
+class App extends Component {
   render() {
   return (
     <div className="App">App
+    <Navbar />
+    {/* { <Logo />
+    <SearchField />
+    <BusinessList />
+    <BusinessItem />
+    <LoginForm />
+    <LogoutForm />
+    <Spinner /> } */}
+
 
 <Particles className='particles'
       params={particlesOptions} />
