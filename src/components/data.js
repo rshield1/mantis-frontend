@@ -1,4 +1,4 @@
-data = {
+const data = {
     "id": "WavvLdfdP6g8aZTtbBQHTw",
     "name": "Gary Danko",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/CPc91bGzKBe95aM5edjhhQ/o.jpg",

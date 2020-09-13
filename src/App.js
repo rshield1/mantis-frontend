@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Particles from 'react-particles-js';
 import Navbar from './components/navigation/Navbar';
-import BusinessItem from './components/businessItem/BusinessItem'
+import Businesses from './components/Businesses/Businesses'
 
 
 const particlesOptions = {
@@ -17,14 +17,16 @@ const particlesOptions = {
   }
 }
 
-
-
 class App extends Component {
   render() {
   return (
     <div className="App">
       <Navbar title="Mantis" icon="will add later"/>
-      <BusinessItem />
+      
+      <div className="container">
+        <Businesses/> 
+      </div>
+      
 
       {/*<SearchField />
       <BusinessList />
