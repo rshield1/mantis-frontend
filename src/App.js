@@ -3,6 +3,7 @@ import './App.css';
 import Particles from 'react-particles-js';
 import Navbar from './components/navigation/Navbar';
 import Logo from './components/logo/Logo';
+import BusinessItem from './components/businessItem/BusinessItem'
 
 
 const particlesOptions = {
@@ -33,11 +34,11 @@ class App extends Component {
     <div className="App">
     <Navbar />
     <Logo />
-
+    <BusinessItem />
 
     {/*<SearchField />
     <BusinessList />
-    <BusinessItem />
+    
     <LoginForm />
     <LogoutForm />
     <Spinner /> } */}
