@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Particles from 'react-particles-js';
 import Navbar from './components/navigation/Navbar';
-import Businesses from './components/Businesses/Businesses'
+import Jokes from './components/jokes/Jokes'
+import axios from 'axios';
 
 
 const particlesOptions = {
@@ -18,19 +19,27 @@ const particlesOptions = {
 }
 
 class App extends Component {
-
-  componentDidMount() {
-
+  state = {
+    jokes: [],
+    loading: false
   }
 
-  
+  async componentDidMount() {
+
+    this.setState({loading: true });
+
+    const res = await axios.get('https://sv443.net/jokeapi/v2/joke/Any?type=single&amount=10')
+    this.setState({ jokes: res.data.jokes, loading: false });
+  }
+
+
   render() {
   return (
     <div className="App">
       <Navbar title="Mantis" icon="will add later"/>
       
       <div className="container">
-        <Businesses/> 
+        <Jokes loading={this.state.loading} jokes={this.state.jokes} /> 
       </div>
       
 
