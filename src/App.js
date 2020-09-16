@@ -37,8 +37,6 @@ class App extends Component {
       <Navbar home="Mantis" favorites="Favorites" account="Account" icon="will add later"/>
       <div className="container">
 
-      <h1 className="center" style={{padding: '5em'}}>Welcome to Mantis</h1>
-
       <LoginForm />
         {/* <Jokes loading={this.state.loading} jokes={this.state.jokes} />  */}
       </div>
