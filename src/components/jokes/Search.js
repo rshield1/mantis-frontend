@@ -7,7 +7,12 @@ export class Search extends Component {
 
 
     onChange = (event) =>( this.setState({ text: event.target.value}))
-    // onSubmit = (event) =>   
+    onSubmit = (event) => {
+        event.preventDefault();
+        this.props.searchJokes(this.state.text);
+        this.setState({text: ''})
+
+    }
     render() {
         return (
             <div>

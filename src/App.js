@@ -25,11 +25,18 @@ class App extends Component {
     loading: false
   }
 
-  async componentDidMount() {
-    this.setState({loading: true });
-    const res = await axios.get('https://sv443.net/jokeapi/v2/joke/Any?type=single&amount=6')
-    this.setState({ jokes: res.data.jokes, loading: false });
-  }
+  // async componentDidMount() {
+  //   this.setState({loading: true });
+    // const res = await axios.get('https://sv443.net/jokeapi/v2/joke/Any?type=single&amount=6')
+    // this.setState({ jokes: res.data.jokes, loading: false });
+  // }
+  // search jokes
+
+  searchJokes = async (text) =>{
+    const res = await axios.get(`https://sv443.net/jokeapi/v2/joke/Any?contains=${text}`)
+    console.log(res.data)
+    this.setState({jokes: res.data.setup})
+  };
 
 
   render() {
@@ -39,8 +46,8 @@ class App extends Component {
       <div className="container">
     
       <LoginForm />  
-      <Search />
-        <Jokes loading={this.state.loading} jokes={this.state.jokes} /> 
+      <Search searchJokes={this.searchJokes}/>
+        <Jokes jokes={this.state.jokes} /> 
       </div>
       
 
