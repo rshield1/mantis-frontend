@@ -3,8 +3,9 @@ import './App.css';
 import Particles from 'react-particles-js';
 import Navbar from './components/navigation/Navbar';
 import LoginForm from './components/loginForm/LoginForm';
-// import Jokes from './components/jokes/Jokes'
+import Jokes from './components/jokes/Jokes'
 import axios from 'axios';
+import Search from './components/jokes/Search'
 
 const particlesOptions = {
   particles: {
@@ -26,7 +27,7 @@ class App extends Component {
 
   async componentDidMount() {
     this.setState({loading: true });
-    const res = await axios.get('https://sv443.net/jokeapi/v2/joke/Any?type=single&amount=10')
+    const res = await axios.get('https://sv443.net/jokeapi/v2/joke/Any?type=single&amount=6')
     this.setState({ jokes: res.data.jokes, loading: false });
   }
 
@@ -36,13 +37,14 @@ class App extends Component {
     <div className="App">
       <Navbar home="Mantis" favorites="Favorites" account="Account" icon="will add later"/>
       <div className="container">
-
-      <LoginForm />
-        {/* <Jokes loading={this.state.loading} jokes={this.state.jokes} />  */}
+    
+      <LoginForm />  
+      <Search />
+        <Jokes loading={this.state.loading} jokes={this.state.jokes} /> 
       </div>
       
 
-      {/*<SearchField />
+      {/*
       <BusinessList />
       
       <LogoutForm />
