@@ -14,7 +14,6 @@ const ContextProvider = (props) => {
             //save data 
             .then(data => setAllPhotos(data))
     }, [])
-        console.log(allPhotos)
 
     return(
         <Context.Provider value={{allPhotos: allPhotos}}>
