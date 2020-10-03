@@ -5,7 +5,7 @@ import {Context} from '../Context';
 function Image({className, img}) {
 
     const [hovered, setHovered] = useState(false)
-    const {toggleFavorite} = useContext(Context)
+    const {toggleFavorite, addToCart} = useContext(Context)
 
     function heartIcon() {
         if(img.isFavorite) {
@@ -16,7 +16,8 @@ function Image({className, img}) {
     }
      
     
-    const cartIcon = hovered && <i className="ri-add-circle-line cart"></i>
+    const cartIcon = hovered && 
+        <i className="ri-add-circle-line cart" onClick={() => addToCart(img)}></i>
     return (
         <div 
             className={`${className} image-container`}
@@ -33,7 +34,7 @@ function Image({className, img}) {
 }
 
 //proptypes
-Image.PropTypes = {
+Image.propTypes = {
     className: PropTypes.string,
     img: PropTypes.shape({
         id: PropTypes.string.isRequired,
