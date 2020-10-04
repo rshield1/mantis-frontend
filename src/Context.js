@@ -7,8 +7,8 @@ const Context = React.createContext()
 const ContextProvider = (props) => {
     const [allPhotos, setAllPhotos] = useState([])
     const [cartItems, setCartItems] = useState([])
-    const url ="https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json"
-    // const url ="http://localhost:4000/photos"
+    // const url ="https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json"
+    const url ="http://localhost:4000/photos"
 
 
     useEffect(() => {
