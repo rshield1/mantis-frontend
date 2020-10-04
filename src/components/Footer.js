@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <div>
             <footer>
-                Copyright &copy; {new Date().getFullYear()} Lynk
+                Copyright &copy; {new Date().getFullYear()} Mantis
             </footer>
         </div>
     )

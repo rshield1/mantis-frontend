@@ -4,6 +4,7 @@ import {Switch, Route } from "react-router-dom"
 import Cart from "./pages/Cart";
 import Photos from "./pages/Photos";
 import Footer from "./components/Footer"
+import Landing from "./pages/Landing"
 
 function App() {    
   return (
@@ -12,6 +13,9 @@ function App() {
           <Switch>
               <Route exact path="/">
                   <Photos />
+              </Route>
+              <Route exact path="/landing">
+                  <Landing />
               </Route>
               
               <Route path="/cart">
