@@ -6,18 +6,17 @@ class Landing extends Component {
     render() {
         return (
             <section className='landing'>
+            <div className='landing-inner'>
                   <h1 className='x-large'><i className="fab fa-accusoft" />Mantis</h1>
-                    <p>
+                  <p className='lead'>
                     View and purchase stunning photos from around the world
                     </p>
                   <div className='buttons'>
-                    <Link to='/register' className='btn btn-primary'>
-                      Sign Up
-                    </Link>
-                    <Link to='/login' className='btn btn-success'>
-                      Login
+                    <Link to='/' className='btn btn-success'>
+                      View our Collection
                     </Link>
                   </div>
+              </div>
             </section>
           )
     }
