@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import {Switch, Route } from "react-router-dom"
 import Cart from "./pages/Cart";
 import Photos from "./pages/Photos";
+import Footer from "./components/Footer"
 
 function App() {    
   return (
@@ -17,6 +18,7 @@ function App() {
                   <Cart />
               </Route>
           </Switch>
+          <Footer/>
       </div>
   )
 }
