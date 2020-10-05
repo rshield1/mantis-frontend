@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <header>
             <Link to="/"><h2><i className="fas fa-camera-retro" /> Mantis</h2></Link>
-            {/* <Link to="/landing"><h2>Landing</h2></Link> */}
+            <Link to="/photos"></Link>
             <Link to="/cart">
                 <i className={`${cartClassName} ri-fw ri-2x`}></i></Link>
         </header>

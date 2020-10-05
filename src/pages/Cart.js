@@ -10,6 +10,7 @@ function Cart() {
     
     const cartItemElements = cartItems.map(item => (
         <CartItem key={item.id} item={item} />
+        
     ))
     
     function placeOrder() {

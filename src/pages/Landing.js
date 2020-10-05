@@ -12,7 +12,7 @@ class Landing extends Component {
                     View and purchase stunning photos from around the world
                     </p>
                   <div>
-                    <Link to='/' className='btn btn-primary'>
+                    <Link to='/photos' className='btn btn-primary'>
                       View Collection
                     </Link>
                   </div>

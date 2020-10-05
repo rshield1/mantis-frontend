@@ -22,10 +22,12 @@ const store = createStore(
 
 
 ReactDOM.render(
-    <ContextProvider>
-        <Router>
-            <App />
-        </Router>
-    </ContextProvider>, 
+    <Provider store={store} >
+        <ContextProvider>
+            <Router>
+                <App />
+            </Router>
+        </ContextProvider>
+    </Provider>, 
     document.getElementById("root")
 )
