@@ -7,23 +7,3 @@ export const fetchAllPhotos = () => {
         }))
     }
 }
-
-export const addPhoto = (data, history) => {
-
-  return (dispatch) => {
-    fetch('http://localhost:4000/photos', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      method: 'POST',
-      body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(photo => {
-      dispatch({type: 'ADD_PHOTO', payload: photo})
-      history.push(`/accounts/${photo.id}`)
-    })
-  }
-
-}

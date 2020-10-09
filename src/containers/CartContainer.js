@@ -1,15 +1,12 @@
 // house the data and methods of photos, etc
 // connect the react component to the redux actions
 import React, { Component } from 'react'
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 // import { fetchAllPhotos } from '../actions/photosActions';
 import Cart from '../pages/Cart'
 
 class CartContainer extends Component {
 
-    // componentDidMount(){
-    //     this.props.fetchAllPhotos()
-    // }
     render() {
         return (
             <div>
@@ -20,6 +17,10 @@ class CartContainer extends Component {
 }
 
 
-// export default connect(null, { fetchAllPhotos })(CartContainer)
-
-export default CartContainer
+const mapStateToProps = state => {
+    return {
+      cart: state.cart
+    }
+  }
+   
+  export default connect(mapStateToProps)(CartContainer);
